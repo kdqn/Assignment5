@@ -16,8 +16,8 @@ $level = (isset($_GET['positionLevel'])) ? $_GET['positionLevel'] :'';
 echo 'Required level: '. $level .'' . PHP_EOL;
 
 // $users = get_users_by_level($positionLevel);
-$users = $applicantsService->get_selected_users("senior", "4", ["C#"]);
-// $users = get_selected_users($experience, $level, $skills);
+// $users = $applicantsService->get_selected_users("senior", "4", ["C#"]);
+$users = $applicantsService->get_selected_users($experience, $level, ["C++"]);
 include_once(ABS_PATH . '/views/head.view.php');
 include_once(ABS_PATH . '/views/welcome.view.php');
 include_once(ABS_PATH . '/views/form.view.php');

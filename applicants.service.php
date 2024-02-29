@@ -10,10 +10,14 @@ if(!defined('ABS_PATH')){die;}
 require_once('./db.service.php');
 // class ApplicantsService{
 	class ApplicantsService {
-		$DBservice = new DBService();
+		public $DBservice;
+
+		function __construct(){
+			$this->DBservice = new DBService();
+		}
 		function get_users_from_database():array{
 			//simply returns an unfiltered list of users from applicants.json
-			return $DBservice->get_users();
+			return $this->DBservice->get_users();
 		}
 	
 		function get_users_by_level(string $level):array{
