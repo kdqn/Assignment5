@@ -26,3 +26,6 @@ foreach ($users as $applicant){
     include(ABS_PATH . '/views/applicant-summary.view.php');
 }
 include_once(ABS_PATH . '/views/footer.view.php');
+
+
+// testing commiting still
